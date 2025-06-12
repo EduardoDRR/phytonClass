@@ -10,21 +10,18 @@ from random import *
 print("Ingresa tu nombre")
 nombre = input()
 print(f'Hola {nombre}, he prensado en un numero entre 1 y 100, y tienes solo 8 intentos para adivinar cual crees que es el numero')
-rand = randint(1-100)
+rand = randint(1,100)
 
 contador = 1
 while contador <= 8:
-    print(f"intento:{contador} Ingrese un numero")  
-    intento = input()
+    intento = int(input(f"intento:{contador} Ingrese un numero: "))
     if intento == rand:
-        print(f"felicidades adivinitaste, te tomo {intento}")
+        print(f"felicidades adivinitaste, te tomo {contador} intentos adivinar el numero {rand}")
         break
     if intento < 1 or intento > 100:
         print("Eligiste  un numero no valido")
     elif intento < rand:
-        print("Tu respuesta es incorrecta y has elejido un numeor menor al pensado")
+        print("Tu respuesta es incorrecta y has elejido un numero menor al pensado")
     elif intento > rand:
         print("Tu respuesta es incorrecta y has elejido un numero mayor al pensado")
-	
-    contador += 1 
-    
+    contador += 1
