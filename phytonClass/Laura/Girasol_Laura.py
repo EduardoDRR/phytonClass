@@ -5,7 +5,7 @@ speed (0)  # Speed of the turtle
 bgcolor("black") # Background color
 goto(0,-40) # Position of the flower
 
-#draw leaves
+
 for i in range (12):
 	for j in range (12):
 		color('#ff5594'), rt(90)
